@@ -1,0 +1,30 @@
+
+
+<section class="bg-info">
+    <h1 class="text-center text-primary ">Datos</h1>
+    <form class="containe ">
+        <section class="row g-3">
+          <section class="raw">
+            <label>Nombre</label>
+            <input type="text" class="form-control text-primary" >
+          </section>
+          <section class="raw">
+            <label>Apellido</label>
+            <input type="text" class="form-control text-primary" >
+          </section>
+          <section class="raw">
+            <label>Edad</label>
+            <input type="text" class="form-control text-primary" #numberEdad>
+          </section>
+        </section>
+        <section class="d-grid col-2 mx-auto">
+          <input type="button" value="Enviar" class="btn btn-primary center" (click)="validarEdad(numberEdad.value)" >
+        </section>
+      </form>
+      <p class="ht text-primary" *ngIf="resultado==false else verdad ">
+        {{mensaje}}
+      </p>
+      <ng-template #verdad>
+        <p class="ht text-primary">{{mensaje}}</p>
+      </ng-template>
+</section>
